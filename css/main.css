@@ -1,0 +1,160 @@
+@keyframes scaleUp {
+  0% {
+    transform: translateX(0) scale(0); }
+  100% {
+    transform: translateX(0) scale(1); } }
+@keyframes moveFromRight {
+  0% {
+    transform: translateX(600%); }
+  100% {
+    transform: translateX(0); } }
+@keyframes moveFromLeft {
+  0% {
+    transform: translateX(-600%); }
+  100% {
+    transform: translateX(0); } }
+@keyframes moveToRight {
+  0% {
+    transform: translateX(0%); }
+  100% {
+    transform: translateX(600%); } }
+@keyframes moveToLeft {
+  0% {
+    transform: translateX(0%); }
+  100% {
+    transform: translateX(-600%); } }
+.mi-slider {
+  position: relative;
+  margin-top: 30px;
+  height: 490px; }
+  .mi-slider ul {
+    list-style-type: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 140px;
+    overflow: hidden;
+    text-align: center;
+    pointer-events: none; }
+    .mi-slider ul li {
+      display: inline-block;
+      padding: 20px;
+      width: 20%;
+      max-width: 300px;
+      transform: translateX(600%);
+      transition: opacity 0.2s linear; }
+      .mi-slider ul li:hover {
+        opacity: 0.7; }
+      .mi-slider ul li a {
+        display: block;
+        margin: 0 auto;
+        outline: none;
+        cursor: pointer; }
+        .mi-slider ul li a img {
+          display: block;
+          margin: 0 auto;
+          max-width: 100%;
+          border: none; }
+        .mi-slider ul li a h4 {
+          display: inline-block;
+          font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+          font-style: italic;
+          font-weight: 400;
+          font-size: 18px;
+          padding: 20px 10px 0; }
+  .mi-slider .start li {
+    animation: scaleUp 350ms ease-in-out both; }
+    .mi-slider .start li:first-child {
+      animation-delay: 90ms; }
+    .mi-slider .start li:nth-child(2) {
+      animation-delay: 180ms; }
+    .mi-slider .start li:nth-child(3) {
+      animation-delay: 270ms; }
+    .mi-slider .start li:nth-child(4) {
+      animation-delay: 360ms; }
+  .mi-slider nav {
+    position: relative;
+    top: 400px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    border-top: 5px solid #333; }
+    .mi-slider nav a {
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      padding: 40px 30px 30px 34px;
+      position: relative;
+      color: #888;
+      outline: none;
+      transition: color 0.2s linear; }
+      .mi-slider nav a:hover {
+        color: #000; }
+    .mi-slider nav .mi-selected {
+      color: #000; }
+      .mi-slider nav .mi-selected:after, .mi-slider nav .mi-selected:before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        border: solid transparent;
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none; }
+      .mi-slider nav .mi-selected:after {
+        border-color: transparent;
+        border-top-color: #fff;
+        border-width: 20px;
+        left: 50%;
+        margin-left: -20px; }
+      .mi-slider nav .mi-selected:before {
+        border-color: transparent;
+        border-top-color: #333;
+        border-width: 27px;
+        left: 50%;
+        margin-left: -27px; }
+
+#mi-slider .mi-current {
+  pointer-events: auto; }
+#mi-slider .mi-moveFromRight li {
+  animation: moveFromRight 350ms ease-in-out both; }
+  #mi-slider .mi-moveFromRight li:first-child {
+    animation-delay: 0ms; }
+  #mi-slider .mi-moveFromRight li:nth-child(2) {
+    animation-delay: 90ms; }
+  #mi-slider .mi-moveFromRight li:nth-child(3) {
+    animation-delay: 180ms; }
+  #mi-slider .mi-moveFromRight li:nth-child(4) {
+    animation-delay: 270ms; }
+#mi-slider .mi-moveFromLeft li {
+  animation: moveFromLeft  350ms ease-in-out both; }
+  #mi-slider .mi-moveFromLeft li:first-child {
+    animation-delay: 270ms; }
+  #mi-slider .mi-moveFromLeft li:nth-child(2) {
+    animation-delay: 180ms; }
+  #mi-slider .mi-moveFromLeft li:nth-child(3) {
+    animation-delay: 90ms; }
+  #mi-slider .mi-moveFromLeft li:nth-child(4) {
+    animation-delay: 0ms; }
+#mi-slider .mi-moveToRight li {
+  animation: moveToRight  350ms ease-in-out both; }
+  #mi-slider .mi-moveToRight li:first-child {
+    animation-delay: 270ms; }
+  #mi-slider .mi-moveToRight li:nth-child(2) {
+    animation-delay: 180ms; }
+  #mi-slider .mi-moveToRight li:nth-child(3) {
+    animation-delay: 90ms; }
+  #mi-slider .mi-moveToRight li:nth-child(4) {
+    animation-delay: 0ms; }
+#mi-slider .mi-moveToLeft li {
+  animation: moveToLeft  350ms ease-in-out both; }
+  #mi-slider .mi-moveToLeft li:first-child {
+    animation-delay: 0ms; }
+  #mi-slider .mi-moveToLeft li:nth-child(2) {
+    animation-delay: 90ms; }
+  #mi-slider .mi-moveToLeft li:nth-child(3) {
+    animation-delay: 180ms; }
+  #mi-slider .mi-moveToLeft li:nth-child(4) {
+    animation-delay: 270ms; }
+
+/*# sourceMappingURL=main.css.map */
